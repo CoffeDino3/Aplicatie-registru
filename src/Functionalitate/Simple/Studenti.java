@@ -1,4 +1,6 @@
-package Functionalitate;
+package Functionalitate.Simple;
+
+import Functionalitate.Abstracte.Persoana;
 
 import java.util.ArrayList;
 
@@ -6,15 +8,12 @@ public class Studenti extends Persoana {
     private int Id;
     private Grupe Grupa;
     private ArrayList<Note> Note = new ArrayList<>();
+    private String poza;
 
-    public Studenti(int id, String nume, String prenume, Grupe grupa) {
+    public Studenti(int id, String nume,String prenume,Grupe grupa) {
         super(nume, prenume);
-        this.Id = id;
-        this.Grupa = grupa;
-    }
-    @Override
-    public String getRol() {
-        return "Student";
+        this.Id=id;
+        this.Grupa=grupa;
     }
     public int getId() {
         return Id;
@@ -31,6 +30,12 @@ public class Studenti extends Persoana {
     public void scoateNota(Note n) {
         Note.remove(n);
     }
+    public String getPoza(){
+        return poza;
+    }
+    public void setPoza(String path){
+        poza=path;
+    }
     public ArrayList<Note> getNote() {
         return Note;
     }
@@ -38,7 +43,9 @@ public class Studenti extends Persoana {
     public double getMedia() {
         if (Note.isEmpty()) return 0;
         double suma = 0;
-        for (Note n : Note) suma += n.getNota();
-        return suma / Note.size();
+        for (Note n : Note){
+            suma +=n.getNota();
+        }
+        return suma/Note.size();
     }
 }

@@ -1,4 +1,4 @@
-package Functionalitate;
+package Functionalitate.Simple;
 
 import Interfete.Printabil;
 
@@ -30,7 +30,7 @@ public class EvidStud implements Printabil {
         try (FileWriter fw = new FileWriter("raport1.txt")) {
             fw.write("Studenti cu media peste 8:\n");
             for (Studenti s : studenti) {
-                if (s.getMedia() >= 8) {
+                if (s.getMedia()>=8) {
                     fw.write(s.getNume() + " " + s.getPrenume() +
                             " | Grupa: " + s.getGrupa().getGrupa() +
                             " | Media: " + s.getMedia() + "\n");
@@ -43,10 +43,10 @@ public class EvidStud implements Printabil {
     //Studenti, grupa, si media care au media sub 5
     @Override
     public void toRaport2() {
-        try (FileWriter fw = new FileWriter("raport2.txt")) {
+        try (FileWriter fw= new FileWriter("raport2.txt")) {
             fw.write("Studenti cu media sub 5:\n");
             for (Studenti s : studenti) {
-                if (s.getMedia() < 5) {
+                if (s.getMedia()<5) {
                     fw.write(s.getNume() + " " + s.getPrenume() +
                             " | Grupa: " + s.getGrupa().getGrupa() +
                             " | Media: " + s.getMedia() + "\n");
@@ -62,8 +62,8 @@ public class EvidStud implements Printabil {
         try (FileWriter fw = new FileWriter("raport3.txt")) {
             fw.write("Studenti cu numele ce incepe cu A sau E:\n");
             for (Studenti s : studenti) {
-                char prima = s.getNume().charAt(0);
-                if (prima == 'A' || prima == 'E') {
+                char prima= s.getNume().charAt(0);
+                if (prima =='A' || prima=='E') {
                     fw.write(s.getNume() + " " + s.getPrenume() +
                             " | Grupa: " + s.getGrupa().getGrupa() +
                             " | Media: " + s.getMedia() + "\n");
@@ -79,7 +79,7 @@ public class EvidStud implements Printabil {
         try (FileWriter fw = new FileWriter("raport1.csv")) {
             fw.write("Nume,Prenume,Grupa,Media\n");
             for (Studenti s : studenti) {
-                if (s.getMedia() >= 8) {
+                if (s.getMedia()>=8) {
                     fw.write(s.getNume() + "," + s.getPrenume() + "," +
                             s.getGrupa().getGrupa() + "," + s.getMedia() + "\n");
                 }
@@ -94,7 +94,7 @@ public class EvidStud implements Printabil {
         try (FileWriter fw = new FileWriter("raport2.csv")) {
             fw.write("Nume,Prenume,Grupa,Media\n");
             for (Studenti s : studenti) {
-                if (s.getMedia() < 5) {
+                if (s.getMedia()<5) {
                     fw.write(s.getNume() + "," + s.getPrenume() + "," +
                             s.getGrupa().getGrupa() + "," + s.getMedia() + "\n");
                 }

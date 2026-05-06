@@ -1,4 +1,4 @@
-package Functionalitate;
+package Functionalitate.Enumerari;
 
 public enum Specialitati {
     PROGRAMARE("Programare", "P"),
@@ -12,9 +12,9 @@ public enum Specialitati {
 
     private final String nume;
     private final String prefix;
-    Specialitati(String nume, String prefix) {
-        this.nume = nume;
-        this.prefix = prefix;
+    Specialitati(String n, String p) {
+        nume=n;
+        prefix =p;
     }
     public String getNume() {
         return nume;

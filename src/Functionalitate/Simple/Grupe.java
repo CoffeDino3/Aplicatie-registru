@@ -1,4 +1,6 @@
-package Functionalitate;
+package Functionalitate.Simple;
+
+import Functionalitate.Enumerari.Specialitati;
 
 public class Grupe {
     private int IdGrupa;

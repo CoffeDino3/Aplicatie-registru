@@ -23,16 +23,23 @@ public class NoteCRUD {
     public static ArrayList<Note> getByStudent(int idStudent) throws SQLException {
         ArrayList<Note> lista=new ArrayList<>();
         String sql="SELECT * FROM note WHERE id_student=?";
-        try (Connection con=Conectie.getConnection();
+        try (Connection con= Conectie.getConnection();
              PreparedStatement ps=con.prepareStatement(sql)) {
-            ps.setInt(1, idStudent);
-            ResultSet rs=ps.executeQuery();
+            ps.setInt(1,  idStudent);
+            ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Discipline d=Discipline.valueOf(
-                        rs.getString("disciplina").toUpperCase().replace(" ", "_")
-                );
-                Note nota=new Note(rs.getInt("nota"), d);
-                lista.add(nota);
+                String numeDisciplina=rs.getString("disciplina");
+                Discipline d=null;
+                for (Discipline disc : Discipline.values()) {
+                    if (disc.getDenumire().equals(numeDisciplina)) {
+                        d=disc;
+                        break;
+                    }
+                }
+                if (d!= null) {
+                    Note nota =new Note(rs.getInt("nota"), d);
+                    lista.add(nota);
+                }
             }
         }
         return lista;

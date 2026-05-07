@@ -57,8 +57,6 @@ public class GrupeCRUD {
             ps.executeUpdate();
         }
     }
-
-    // DELETE
     public static void sterge(int id) throws SQLException {
         String sql = "DELETE FROM grupe WHERE id_grupa=?";
         try (Connection con=Conectie.getConnection();

@@ -9,19 +9,11 @@ import java.util.ArrayList;
 public class EvidStud implements Printabil {
     static ArrayList<Studenti> studenti = new ArrayList<>();
     static ArrayList<Grupe> grupe = new ArrayList<>();
-    static ArrayList<Note> note = new ArrayList<>();
     public static <T> void adauga(ArrayList<T> lista, T element) {
         lista.add(element);
     }
     public static <T> void scoate(ArrayList<T> lista, T element) {
         lista.remove(element);
-    }
-    public static double getMedia(ArrayList<Note> note){
-        double suma = 0;
-        for(Note n : note){
-            suma += n.getNota();
-        }
-        return suma/note.size();
     }
 
     //Studenti, grupa, si media care au media peste 8
@@ -118,6 +110,26 @@ public class EvidStud implements Printabil {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+    //cautari
+    public static ArrayList<Studenti> cautaDupaGrupa(String grupa) {
+        ArrayList<Studenti> rezultat = new ArrayList<>();
+        for (Studenti s : studenti) {
+            if (s.getGrupa().getGrupa().equals(grupa)) {
+                rezultat.add(s);
+            }
+        }
+        return rezultat;
+    }
+
+    public static ArrayList<Studenti> cautaDupaNume(String nume) {
+        ArrayList<Studenti> rezultat = new ArrayList<>();
+        for (Studenti s : studenti) {
+            if (s.getNume().toLowerCase().contains(nume.toLowerCase())) {
+                rezultat.add(s);
+            }
+        }
+        return rezultat;
     }
 
 }

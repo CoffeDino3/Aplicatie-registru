@@ -10,10 +10,10 @@ public class Studenti extends Persoana {
     private ArrayList<Note> Note = new ArrayList<>();
     private String poza;
 
-    public Studenti(int id, String nume,String prenume,Grupe grupa) {
-        super(nume, prenume);
-        this.Id=id;
-        this.Grupa=grupa;
+    public Studenti(int i, String n,String p,Grupe g) {
+        super(n, p);
+        Id=i;
+        Grupa=g;
     }
     public int getId() {
         return Id;

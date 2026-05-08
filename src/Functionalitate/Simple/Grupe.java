@@ -20,7 +20,7 @@ public class Grupe {
         return IdGrupa;
     }
     public void setIdGrupa(int Id) {
-        if(Id>=1000 && Id<=9999){
+        if(Id>=2000 && Id<=2700){
             IdGrupa = Id;
         }else{
             throw new IllegalArgumentException("Id invalid!");

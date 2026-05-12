@@ -9,7 +9,7 @@ public class Note {
         if(N >= 1 && N<=10){
             Nota= N;
         }else{
-            throw new IllegalArgumentException("Nota invalida!");
+            throw new IllegalArgumentException("Nota invalida.");
         }
         disciplina=d;
     }
@@ -21,7 +21,7 @@ public class Note {
         if(N>=1 && N<= 10){
             Nota=N;
         }else{
-            throw new IllegalArgumentException("Nota invalida!");
+            throw new IllegalArgumentException("Nota invalida.");
         }
     }
     public Discipline getDisciplina(){

@@ -9,12 +9,12 @@ import java.util.ArrayList;
 
 public class StudentiCRUD {
     public static void adauga(Studenti s) throws SQLException {
-        String sql="INSERT INTO studenti (nume, prenume, id_grupa, poza) VALUES (?, ?, ?, ?)";
-        try (Connection con=Conectie.getConnection();
-             PreparedStatement ps=con.prepareStatement(sql)) {
+        String sql = "INSERT INTO studenti (nume, prenume, id_grupa, poza) VALUES (?, ?, ?, ?)";
+        try (Connection con = Conectie.getConnection();
+             PreparedStatement ps = con.prepareStatement(sql)) {
             ps.setString(1, s.getNume());
             ps.setString(2, s.getPrenume());
-            ps.setInt(3, s.getGrupa().getIdGrupa());
+            ps.setInt(3, s.getGrupa().getId()); // uses new getId()
             ps.setString(4, s.getPoza());
             ps.executeUpdate();
         }

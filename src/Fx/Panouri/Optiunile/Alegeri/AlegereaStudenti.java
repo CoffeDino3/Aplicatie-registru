@@ -153,8 +153,8 @@ public class AlegereaStudenti {
 
         btnBack.setOnAction(e ->app.arataModificare());
         btn1.setOnMouseClicked(e-> app.arataAdaugStudenti());
-        //btn2.setOnMouseClicked(e -> app.arataModStudenti());
-        //btn3.setOnMouseClicked(e -> app.arataStergStudenti());
+        btn2.setOnMouseClicked(e -> app.arataModStudenti());
+        btn3.setOnMouseClicked(e -> app.arataStergStudenti());
         scene =new Scene(root,900, 600);
     }
 

@@ -99,8 +99,13 @@ public class AdaugNote {
         form.setAlignment(Pos.CENTER);
 
         ComboBox<String> cbStudent =new ComboBox<>();
+        cbStudent.setMinHeight(0);
+        cbStudent.setMinWidth(0);
         cbStudent.prefWidthProperty().bind(root.widthProperty().multiply(0.30));
-        cbStudent.setStyle("-fx-background-color: #c97a60; -fx-background-radius: 10; -fx-font-size: 13px;");
+        cbStudent.prefHeightProperty().bind(root.widthProperty().multiply(0.025));
+        cbStudent.styleProperty().bind(root.widthProperty().divide(70).asString(
+                "-fx-background-color: #c97a60; -fx-background-radius: 10; -fx-font-size: %.0fpx; -fx-font-weight: bold;"
+        ));
         try {
             for (Studenti s : StudentiCRUD.getAll()){
                 cbStudent.getItems().add(s.getId()+" - "+s.getNume()+" "+s.getPrenume());
@@ -115,8 +120,13 @@ public class AdaugNote {
         }
 
         ComboBox<String> cbDisc =new ComboBox<>();
+        cbDisc.setMinHeight(0);
+        cbDisc.setMinWidth(0);
         cbDisc.prefWidthProperty().bind(root.widthProperty().multiply(0.30));
-        cbDisc.setStyle("-fx-background-color: #c97a60; -fx-background-radius: 10; -fx-font-size: 13px;");
+        cbDisc.prefHeightProperty().bind(root.widthProperty().multiply(0.025));
+        cbDisc.styleProperty().bind(root.widthProperty().divide(70).asString(
+                "-fx-background-color: #c97a60; -fx-background-radius: 10; -fx-font-size: %.0fpx; -fx-font-weight: bold;"
+        ));
         for (Discipline d : Discipline.values()){
             cbDisc.getItems().add(d.getDenumire());
         }
@@ -206,8 +216,13 @@ public class AdaugNote {
 
     private ComboBox<Integer> creeazaCombo(StackPane root) {
         ComboBox<Integer> cb=new ComboBox<>();
+        cb.setMinHeight(0);
+        cb.setMinWidth(0);
         cb.prefWidthProperty().bind(root.widthProperty().multiply(0.30));
-        cb.setStyle("-fx-background-color: #c97a60; -fx-background-radius: 10; -fx-font-size: 13px;");
+        cb.prefHeightProperty().bind(root.widthProperty().multiply(0.025));
+        cb.styleProperty().bind(root.widthProperty().divide(70).asString(
+                "-fx-background-color: #c97a60; -fx-background-radius: 10; -fx-font-size: %.0fpx; -fx-font-weight: bold;"
+        ));
         return cb;
     }
 

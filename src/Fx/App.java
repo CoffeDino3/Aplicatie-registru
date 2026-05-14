@@ -16,6 +16,7 @@ import Fx.Panouri.Optiunile.Alegeri.Stergeri.StergNote;
 import Fx.Panouri.Optiunile.Alegeri.Stergeri.StergStudenti;
 import Fx.Panouri.Optiunile.Tabele;
 import javafx.application.Application;
+import javafx.concurrent.Task;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -40,6 +41,10 @@ public class App extends Application {
         currentWidth=stage.getWidth();
         currentHeight =stage.getHeight();
         arataMeniul();
+        new Thread(() -> {
+            Scene s = new ModStudenti(this).getScene();
+            javafx.application.Platform.runLater(() -> { mod3 = s; });
+        }).start();
         stage.getIcons().add(new Image(App.class.getResourceAsStream("/Imagine/icon.png")));
     }
     private double currentWidth=900;
@@ -125,7 +130,16 @@ public class App extends Application {
         }
         switchScene(ad3);
     }
-    /*
+    private Scene mod3;
+    public void arataModStudenti() {
+        if (mod3 != null) { switchScene(mod3); return; }
+        Task<Scene> task = new Task<>() {
+            @Override protected Scene call() { return new ModStudenti(App.this).getScene(); }
+        };
+        task.setOnSucceeded(e -> { mod3 = task.getValue(); switchScene(mod3); });
+        new Thread(task).start();
+    }
+
     private Scene mod1;
     public void arataModGrupe(){
         if(mod1==null){
@@ -142,14 +156,14 @@ public class App extends Application {
         switchScene(mod2);
     }
 
-    private Scene mod3;
-    public void arataModStudenti(){
-        if(mod3==null){
-            mod3=new ModStudenti(this).getScene();
+/*
+    private Scene st3;
+    public void arataStergStudenti(){
+        if(st3==null){
+            st3=new StergStudenti(this).getScene();
         }
-        switchScene(mod3);
+        switchScene(st3);
     }
-
     private Scene st;
     public void arataStergGrupe(){
         if(st==null){
@@ -166,13 +180,7 @@ public class App extends Application {
         switchScene(st2);
     }
 
-    private Scene st3;
-    public void arataStergStudenti(){
-        if(st3==null){
-            st3=new StergStudenti(this).getScene();
-        }
-        switchScene(st3);
-    }
+
 
      */
     /*

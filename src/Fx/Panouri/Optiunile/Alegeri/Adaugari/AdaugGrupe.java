@@ -115,8 +115,13 @@ public class AdaugGrupe {
         for (Specialitati s : Specialitati.values()){
             cbSpec.getItems().add(s.getNume());
         }
+        cbSpec.setMinHeight(0);
+        cbSpec.setMinWidth(0);
         cbSpec.prefWidthProperty().bind(root.widthProperty().multiply(0.30));
-        cbSpec.setStyle("-fx-background-color: #c97a60; -fx-background-radius: 10; -fx-font-size: 13px;");
+        cbSpec.prefHeightProperty().bind(root.widthProperty().multiply(0.025));
+        cbSpec.styleProperty().bind(root.widthProperty().divide(70).asString(
+                "-fx-background-color: #c97a60; -fx-background-radius: 10; -fx-font-size: %.0fpx; -fx-font-weight: bold;"
+        ));
 
         form.getChildren().addAll(
                 creeazaRand("An inmatriculare:", cbAn, root),
@@ -204,8 +209,13 @@ public class AdaugGrupe {
     }
     private ComboBox<Integer> creeazaCombo(StackPane root) {
         ComboBox<Integer> cb=new ComboBox<>();
+        cb.setMinHeight(0);
+        cb.setMinWidth(0);
         cb.prefWidthProperty().bind(root.widthProperty().multiply(0.30));
-        cb.setStyle("-fx-background-color: #c97a60; -fx-background-radius: 10; -fx-font-size: 13px;");
+        cb.prefHeightProperty().bind(root.widthProperty().multiply(0.025));
+        cb.styleProperty().bind(root.widthProperty().divide(70).asString(
+                "-fx-background-color: #c97a60; -fx-background-radius: 10; -fx-font-size: %.0fpx; -fx-font-weight: bold;"
+        ));
         return cb;
     }
     public Scene getScene() {

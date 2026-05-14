@@ -153,7 +153,7 @@ public class AlegereaGrupe {
         btnBack.setOnAction(e ->app.arataModificare());
         btn1.setOnMouseClicked(e-> app.arataAdaugGrupe());
         btn2.setOnMouseClicked(e -> app.arataModGrupe());
-        //btn3.setOnMouseClicked(e -> app.arataStergGrupe());
+        btn3.setOnMouseClicked(e -> app.arataStergGrupe());
         scene =new Scene(root,900, 600);
     }
 

@@ -88,4 +88,14 @@ public class StudentiCRUD {
             ps.executeUpdate();
         }
     }
+    public static int countByGrupa(int idGrupa) throws SQLException {
+        String sql = "SELECT COUNT(*) FROM studenti WHERE id_grupa = ?";
+        try (Connection con = Conectie.getConnection();
+             PreparedStatement ps = con.prepareStatement(sql)) {
+            ps.setInt(1, idGrupa);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) return rs.getInt(1);
+        }
+        return 0;
+    }
 }

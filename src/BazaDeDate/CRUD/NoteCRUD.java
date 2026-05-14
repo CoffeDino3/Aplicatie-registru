@@ -106,4 +106,14 @@ public class NoteCRUD {
             ps.executeUpdate();
         }
     }
+    public static int countByStudent(int idStudent) throws SQLException {
+        String sql = "SELECT COUNT(*) FROM note WHERE id_student = ?";
+        try (Connection con = Conectie.getConnection();
+             PreparedStatement ps = con.prepareStatement(sql)) {
+            ps.setInt(1, idStudent);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) return rs.getInt(1);
+        }
+        return 0;
+    }
 }

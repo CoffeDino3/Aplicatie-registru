@@ -156,7 +156,6 @@ public class App extends Application {
         switchScene(mod2);
     }
 
-/*
     private Scene st3;
     public void arataStergStudenti(){
         if(st3==null){
@@ -180,9 +179,6 @@ public class App extends Application {
         switchScene(st2);
     }
 
-
-
-     */
     /*
     public void arataAfisare() {
         Afisari afis = new Afisari(this);

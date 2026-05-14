@@ -153,7 +153,7 @@ public class AlegereaNote {
         btnBack.setOnAction(e ->app.arataModificare());
         btn1.setOnMouseClicked(e-> app.arataAdaugNote());
         btn2.setOnMouseClicked(e -> app.arataModNote());
-        //btn3.setOnMouseClicked(e -> app.arataStergNote());
+        btn3.setOnMouseClicked(e -> app.arataStergNote());
         scene =new Scene(root,900, 600);
     }
 

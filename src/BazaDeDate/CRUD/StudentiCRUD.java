@@ -65,8 +65,6 @@ public class StudentiCRUD {
         }
         return null;
     }
-
-    // Aici am pus logica de "Update" pe care o aveai in UI
     public static void actualizeaza(Studenti s) throws SQLException {
         String sql = "UPDATE studenti SET nume=?, prenume=?, id_grupa=?, poza=? WHERE id=?";
         try (Connection con = Conectie.getConnection();

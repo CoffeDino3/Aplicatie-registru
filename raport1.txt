@@ -1,0 +1,22 @@
+Studenti cu media peste 8:
+Sclifos Ana | Grupa: P-2421 | Media: 8.166666666666666
+Dogari Elena | Grupa: P-2423 | Media: 8.0
+Ivanciuc Vadim | Grupa: P-2423 | Media: 8.8
+Botnari Daniel | Grupa: P-2423 | Media: 8.5
+Cretu Stefan | Grupa: P-2514 | Media: 8.666666666666666
+Roica Nicolae | Grupa: P-2514 | Media: 8.833333333333334
+Zamostean Nicolae | Grupa: W-2331 | Media: 8.0
+Bors Patricia | Grupa: W-2331 | Media: 9.5
+Chiochiu Andrei | Grupa: R-2332 | Media: 8.2
+Moraru Alexandru | Grupa: R-2332 | Media: 8.0
+Russu Ion | Grupa: R-2332 | Media: 8.8
+Grosu Elena | Grupa: C-2422 | Media: 8.0
+Grama Ioana | Grupa: C-2422 | Media: 8.6
+Rotaru Mihai | Grupa: C-2511 | Media: 8.25
+Farcas Ion | Grupa: C-2511 | Media: 8.8
+Grigore Andreea | Grupa: J-2242 | Media: 8.0
+Iordache Cristina | Grupa: J-2242 | Media: 8.25
+Kelemen Florina | Grupa: J-2242 | Media: 8.8
+Lungu George | Grupa: B-2341 | Media: 8.0
+Niculescu Andrei | Grupa: B-2341 | Media: 9.2
+Dogaru Andreea | Grupa: O-2513 | Media: 8.833333333333334

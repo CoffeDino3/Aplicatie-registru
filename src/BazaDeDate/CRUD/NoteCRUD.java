@@ -19,12 +19,15 @@ public class NoteCRUD {
     }
 
     public static ArrayList<Object[]> getAllFull() throws SQLException {
-        ArrayList<Object[]> lista=new ArrayList<>();
-        String sql="SELECT n.id, n.nota, n.disciplina, n.id_student, s.nume, s.prenume " +
-                "FROM note n JOIN studenti s ON n.id_student=s.id ORDER BY n.id ASC";
-        try (Connection con=Conectie.getConnection();
-             Statement st=con.createStatement();
-             ResultSet rs=st.executeQuery(sql)) {
+        ArrayList<Object[]> lista = new ArrayList<>();
+        String sql = "SELECT n.id, n.nota, n.disciplina, n.id_student, s.nume, s.prenume, g.grupa " +
+                "FROM note n " +
+                "JOIN studenti s ON n.id_student = s.id " +
+                "JOIN grupe g ON s.id_grupa = g.id " +
+                "ORDER BY n.id ASC";
+        try (Connection con = Conectie.getConnection();
+             Statement st = con.createStatement();
+             ResultSet rs = st.executeQuery(sql)) {
             while (rs.next()) {
                 lista.add(new Object[]{
                         rs.getInt("id"),
@@ -32,7 +35,8 @@ public class NoteCRUD {
                         rs.getString("disciplina"),
                         rs.getInt("id_student"),
                         rs.getString("nume"),
-                        rs.getString("prenume")
+                        rs.getString("prenume"),
+                        rs.getString("grupa")
                 });
             }
         }

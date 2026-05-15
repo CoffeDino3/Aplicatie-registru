@@ -194,8 +194,8 @@ public class Optiuni {
 
 
         btn1.setOnMouseClicked(e-> app.arataModificare());
-        //btn2.setOnMouseClicked(e -> app.arataAfisare());
-        //btn3.setOnMouseClicked(e -> app.arataRapoarte());
+        btn2.setOnMouseClicked(e -> app.arataAfisareTabele());
+        btn3.setOnMouseClicked(e -> app.arataRapoarte());
 
         scene =new Scene(root,900, 600);
 

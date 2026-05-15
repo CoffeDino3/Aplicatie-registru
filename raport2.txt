@@ -1,0 +1,23 @@
+Studenti cu media sub 5:
+Stanca Mihail | Grupa: P-2421 | Media: 4.0
+Cascaval Vlad | Grupa: P-2423 | Media: 3.0
+Ceban Vlad | Grupa: P-2514 | Media: 2.4
+Ciumac Andreea | Grupa: P-2514 | Media: 3.5
+Oboroceanu Ion | Grupa: W-2331 | Media: 2.8
+Ixari Madalina | Grupa: W-2331 | Media: 4.0
+Pascaru Maria | Grupa: R-2332 | Media: 3.5
+Harea Cristina | Grupa: R-2332 | Media: 2.5
+Lazari Dumitru | Grupa: C-2422 | Media: 3.0
+Baciu Andrei | Grupa: C-2422 | Media: 3.5
+Ciobanu Ana | Grupa: C-2511 | Media: 2.5
+Ene Maria | Grupa: C-2511 | Media: 4.0
+Hristea Bogdan | Grupa: J-2242 | Media: 3.0
+Jora Eduard | Grupa: J-2242 | Media: 3.5
+Manea Ioana | Grupa: B-2341 | Media: 3.0
+Olteanu Elena | Grupa: B-2341 | Media: 3.5
+Sava Alexandru | Grupa: O-2513 | Media: 2.5
+Ungureanu Ion | Grupa: O-2513 | Media: 2.3333333333333335
+Type Danu | Grupa: O-2513 | Media: 0.0
+Papuc Vlad | Grupa: O-2513 | Media: 0.0
+Devilis Artur | Grupa: C-2511 | Media: 0.0
+Aaaa Pren | Grupa: J-2242 | Media: 0.0

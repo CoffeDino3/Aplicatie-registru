@@ -1,5 +1,9 @@
 package Fx;
 
+import Fx.Panouri.Afisari.AfisGrupe;
+import Fx.Panouri.Afisari.AfisNote;
+import Fx.Panouri.Afisari.AfisStudenti;
+import Fx.Panouri.Afisari.AfisareTabele;
 import Fx.Panouri.Meniu;
 import Fx.Panouri.Optiuni;
 import Fx.Panouri.Optiunile.Alegeri.Adaugari.AdaugGrupe;
@@ -15,6 +19,7 @@ import Fx.Panouri.Optiunile.Alegeri.Stergeri.StergGrupe;
 import Fx.Panouri.Optiunile.Alegeri.Stergeri.StergNote;
 import Fx.Panouri.Optiunile.Alegeri.Stergeri.StergStudenti;
 import Fx.Panouri.Optiunile.Tabele;
+import Fx.Panouri.Report.Rapoarte;
 import javafx.application.Application;
 import javafx.concurrent.Task;
 import javafx.scene.Scene;
@@ -179,17 +184,51 @@ public class App extends Application {
         switchScene(st2);
     }
 
-    /*
-    public void arataAfisare() {
-        Afisari afis = new Afisari(this);
-        stage.setScene(afis.getScene());
-    }
-    public void arataRapoarte() {
-        Rapoarte rap = new Rapoarte(this);
-        stage.setScene(rap.getScene());
+    private Scene afis;
+    public void arataAfisareTabele() {
+        if(afis==null){
+            afis=new AfisareTabele(this).getScene();
+        }
+        switchScene(afis);
     }
 
-     */
+    private Scene afstud;
+    private Scene afgrupe;
+    private Scene afnote;
+    public void setAfisStudenti(Scene scene) { this.afstud = scene; }
+    public void setAfisGrupe(Scene scene) { this.afgrupe = scene; }
+    public void setAfisNote(Scene scene) { this.afnote = scene; }
+
+
+    public void arataAfisStudenti() {
+
+        if (afstud == null) {
+            afstud = new AfisStudenti(this).getScene();
+        }
+        switchScene(afstud);
+    }
+
+    public void arataAfisGrupe() {
+        if (afgrupe == null) {
+            afgrupe = new AfisGrupe(this).getScene();
+        }
+        switchScene(afgrupe);
+    }
+
+    public void arataAfisNote() {
+        if (afnote == null) {
+            afnote = new AfisNote(this).getScene();
+        }
+        switchScene(afnote);
+    }
+    private Scene rap;
+    public void arataRapoarte() {
+        if(rap==null){
+            rap=new Rapoarte(this).getScene();
+        }
+        switchScene(rap);
+    }
+
 
     public static void main(String[] args) {
         launch(args);

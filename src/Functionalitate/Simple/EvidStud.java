@@ -7,8 +7,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class EvidStud implements Printabil {
-    static ArrayList<Studenti> studenti = new ArrayList<>();
-    static ArrayList<Grupe> grupe = new ArrayList<>();
+    public static ArrayList<Studenti> studenti = new ArrayList<>();
+    public static ArrayList<Grupe> grupe = new ArrayList<>();
     public static <T> void adauga(ArrayList<T> lista, T element) {
         lista.add(element);
     }
@@ -110,26 +110,6 @@ public class EvidStud implements Printabil {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
-    //cautari
-    public static ArrayList<Studenti> cautaDupaGrupa(String grupa) {
-        ArrayList<Studenti> rezultat = new ArrayList<>();
-        for (Studenti s : studenti) {
-            if (s.getGrupa().getGrupa().equals(grupa)) {
-                rezultat.add(s);
-            }
-        }
-        return rezultat;
-    }
-
-    public static ArrayList<Studenti> cautaDupaNume(String nume) {
-        ArrayList<Studenti> rezultat = new ArrayList<>();
-        for (Studenti s : studenti) {
-            if (s.getNume().toLowerCase().contains(nume.toLowerCase())) {
-                rezultat.add(s);
-            }
-        }
-        return rezultat;
     }
 
 }

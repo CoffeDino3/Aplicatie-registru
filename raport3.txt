@@ -1,0 +1,5 @@
+Studenti cu numele ce incepe cu A sau E:
+Aaa Daniel | Grupa: P-2421 | Media: 6.25
+Enachi Andrei | Grupa: P-2421 | Media: 5.2
+Ene Maria | Grupa: C-2511 | Media: 4.0
+Aaaa Pren | Grupa: J-2242 | Media: 0.0

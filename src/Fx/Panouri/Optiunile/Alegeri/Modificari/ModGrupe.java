@@ -91,7 +91,10 @@ public class ModGrupe {
         Text title= new Text("MODIFICA GRUPA");
         title.styleProperty().bind(root.widthProperty().divide(14).asString("-fx-font-size: %.0fpx; -fx-font-weight: bold; -fx-font-family: 'League Spartan';"));
 
-        HBox headerRow= new HBox(0, creeazaHeaderCelula("ID", 0.10, root), creeazaHeaderCelula("Grupa", 0.18, root), creeazaHeaderCelula("An", 0.10, root), creeazaHeaderCelula("Clasa", 0.10, root), creeazaHeaderCelula("Nr", 0.10, root), creeazaHeaderCelula("Specialitate", 0.21, root));
+        HBox headerRow= new HBox(0, creeazaHeaderCelula("ID", 0.10, root),
+                creeazaHeaderCelula("Grupa", 0.18, root), creeazaHeaderCelula("An", 0.10, root),
+                creeazaHeaderCelula("An", 0.10, root), creeazaHeaderCelula("Nr", 0.10, root),
+                creeazaHeaderCelula("Specialitate", 0.21, root));
         headerRow.setAlignment(Pos.CENTER);
 
         ComboBox<String> cbId =new ComboBox<>();
@@ -145,7 +148,7 @@ public class ModGrupe {
         CheckBox ckNr= new CheckBox();
         CheckBox ckSpec = new CheckBox();
 
-        HBox checkRow =new HBox(50, creeazaCheckLabel("An", ckAn, root), creeazaCheckLabel("Clasa", ckClasa, root), creeazaCheckLabel("Nr", ckNr, root), creeazaCheckLabel("Specialitate", ckSpec, root));
+        HBox checkRow =new HBox(50, creeazaCheckLabel("An", ckAn, root), creeazaCheckLabel("An", ckClasa, root), creeazaCheckLabel("Nr", ckNr, root), creeazaCheckLabel("Specialitate", ckSpec, root));
         checkRow.spacingProperty().bind(root.widthProperty().multiply(0.06));
         checkRow.setAlignment(Pos.CENTER);
 
@@ -178,7 +181,7 @@ public class ModGrupe {
         randAn.visibleProperty().bind(ckAn.selectedProperty());
         randAn.managedProperty().bind(ckAn.selectedProperty());
 
-        HBox randClasa = creeazaRandEdit("Clasa:", cbClasaField, root);
+        HBox randClasa = creeazaRandEdit("An:", cbClasaField, root);
         randClasa.visibleProperty().bind(ckClasa.selectedProperty());
         randClasa.managedProperty().bind(ckClasa.selectedProperty());
 

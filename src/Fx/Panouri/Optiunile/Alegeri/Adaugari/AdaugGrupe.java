@@ -125,7 +125,7 @@ public class AdaugGrupe {
 
         form.getChildren().addAll(
                 creeazaRand("An inmatriculare:", cbAn, root),
-                creeazaRand("Clasa:", cbClasa, root),
+                creeazaRand("An:", cbClasa, root),
                 creeazaRand("Nr. grupa:", cbNr, root),
                 creeazaRand("Specialitate:", cbSpec, root)
         );

@@ -153,17 +153,14 @@ public class AfisareTabele {
             btnBack.setLayoutY(textLayer.getHeight() *0.80);
         });
 
-        btnBack.setOnAction(e ->app.arataOptiunile());
+        btnBack.setOnAction(e -> app.arataOptiunile());
         btn1.setOnMouseClicked(e -> {
-            app.setAfisStudenti(new AfisStudenti(app).getScene());
             app.arataAfisStudenti();
         });
         btn2.setOnMouseClicked(e -> {
-            app.setAfisGrupe(new AfisGrupe(app).getScene());
             app.arataAfisGrupe();
         });
         btn3.setOnMouseClicked(e -> {
-            app.setAfisNote(new AfisNote(app).getScene());
             app.arataAfisNote();
         });
         scene =new Scene(root,900, 600);

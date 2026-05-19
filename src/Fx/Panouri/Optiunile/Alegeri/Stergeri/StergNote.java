@@ -209,7 +209,7 @@ public class StergNote {
             try {
                 toateNotele.addAll(NoteCRUD.getAllFull());
                 for (Object[] row :toateNotele) {
-                    cbId.getItems().add(String.valueOf(row[0]));
+                    cbId.getItems().add(row[0]+ " - " +row[4] + " " + row[5]);
                 }
             } catch (SQLException ignored) {}
         };

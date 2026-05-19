@@ -249,7 +249,7 @@ public class StergGrupe {
                 creeazaPreviewRand("Cod Grupa:", tGrupaNume, root),
                 creeazaPreviewRand("Specialitate:", tSpec, root),
                 creeazaPreviewRand("An Studii:", tAn, root),
-                creeazaPreviewRand("Clasa:", tClasa, root),
+                creeazaPreviewRand("An:", tClasa, root),
                 creeazaPreviewRand("Numar Grupa:", tNrGrupa, root)
         );
 

@@ -21,4 +21,5 @@ public class Conectie {
         }
         return instance;
     }
+
 }

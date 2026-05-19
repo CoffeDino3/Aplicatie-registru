@@ -34,7 +34,7 @@ public class AfisGrupe {
     private Scene scene;
 
     private static final double[] COL_W = {0.07, 0.13, 0.09, 0.09, 0.08, 0.26, 0.12};
-    private static final String[] COL_NAMES = {"ID", "Grupa", "An", "Clasa", "Nr", "Specialitate", "Studenti"};
+    private static final String[] COL_NAMES = {"ID", "Grupa", "An", "An Stud", "Nr", "Specialitate", "Studenti"};
     private static final double TABLE_FRAC = 0.92;
 
     private static final double ROW_HEIGHT_FRAC = 0.08;

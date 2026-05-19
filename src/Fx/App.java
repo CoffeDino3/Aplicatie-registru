@@ -46,10 +46,6 @@ public class App extends Application {
         currentWidth=stage.getWidth();
         currentHeight =stage.getHeight();
         arataMeniul();
-        new Thread(() -> {
-            Scene s = new ModStudenti(this).getScene();
-            javafx.application.Platform.runLater(() -> { mod3 = s; });
-        }).start();
         stage.getIcons().add(new Image(App.class.getResourceAsStream("/Imagine/icon.png")));
     }
     private double currentWidth=900;
@@ -65,168 +61,84 @@ public class App extends Application {
         });
     }
 
-    private Scene mainer;
     public void arataMeniul() {
-        if(mainer==null){
-            mainer=new Meniu(this).getScene();
-        }
-        switchScene(mainer);
+        switchScene(new Meniu(this).getScene());
     }
-    private Scene optiune;
+
     public void arataOptiunile(){
-        if(optiune==null){
-            optiune=new Optiuni(this).getScene();
-        }
-        switchScene(optiune);
+        switchScene(new Optiuni(this).getScene());
     }
 
-    private Scene mod;
     public void arataModificare() {
-        if(mod==null){
-            mod=new Tabele(this).getScene();
-        }
-        switchScene(mod);
+        switchScene(new Tabele(this).getScene());
     }
 
-    private Scene aleg;
     public void arataAlegStud(){
-        if(aleg==null){
-            aleg=new AlegereaStudenti(this).getScene();
-        }
-        switchScene(aleg);
+        switchScene(new AlegereaStudenti(this).getScene());
     }
 
-    private Scene aleg2;
     public void arataAlegNote(){
-        if(aleg2==null){
-            aleg2=new AlegereaNote(this).getScene();
-        }
-        switchScene(aleg2);
+        switchScene(new AlegereaNote(this).getScene());
     }
 
-    private Scene aleg3;
     public void arataAlegGrupe(){
-        if(aleg3==null){
-            aleg3=new AlegereaGrupe(this).getScene();
-        }
-        switchScene(aleg3);
+        switchScene(new AlegereaGrupe(this).getScene());
     }
 
-    private Scene ad;
     public void arataAdaugGrupe(){
-        if(ad==null){
-            ad=new AdaugGrupe(this).getScene();
-        }
-        switchScene(ad);
+        switchScene(new AdaugGrupe(this).getScene());
     }
 
-    private Scene ad2;
     public void arataAdaugNote(){
-        if(ad2==null){
-            ad2=new AdaugNote(this).getScene();
-        }
-        switchScene(ad2);
+        switchScene(new AdaugNote(this).getScene());
     }
 
-    private Scene ad3;
     public void arataAdaugStudenti(){
-        if(ad3==null){
-            ad3=new AdaugStudenti(this).getScene();
-        }
-        switchScene(ad3);
+        switchScene(new AdaugStudenti(this).getScene());
     }
-    private Scene mod3;
+
     public void arataModStudenti() {
-        if (mod3 != null) { switchScene(mod3); return; }
-        Task<Scene> task = new Task<>() {
-            @Override protected Scene call() { return new ModStudenti(App.this).getScene(); }
-        };
-        task.setOnSucceeded(e -> { mod3 = task.getValue(); switchScene(mod3); });
-        new Thread(task).start();
+        switchScene(new ModStudenti(this).getScene());
     }
 
-    private Scene mod1;
     public void arataModGrupe(){
-        if(mod1==null){
-            mod1=new ModGrupe(this).getScene();
-        }
-        switchScene(mod1);
+        switchScene(new ModGrupe(this).getScene());
     }
 
-    private Scene mod2;
     public void arataModNote(){
-        if(mod2==null){
-            mod2=new ModNote(this).getScene();
-        }
-        switchScene(mod2);
+        switchScene(new ModNote(this).getScene());
     }
 
-    private Scene st3;
     public void arataStergStudenti(){
-        if(st3==null){
-            st3=new StergStudenti(this).getScene();
-        }
-        switchScene(st3);
+        switchScene(new StergStudenti(this).getScene());
     }
-    private Scene st;
+
     public void arataStergGrupe(){
-        if(st==null){
-            st=new StergGrupe(this).getScene();
-        }
-        switchScene(st);
+        switchScene(new StergGrupe(this).getScene());
     }
 
-    private Scene st2;
     public void arataStergNote(){
-        if(st2==null){
-            st2=new StergNote(this).getScene();
-        }
-        switchScene(st2);
+        switchScene(new StergNote(this).getScene());
     }
 
-    private Scene afis;
     public void arataAfisareTabele() {
-        if(afis==null){
-            afis=new AfisareTabele(this).getScene();
-        }
-        switchScene(afis);
+        switchScene(new AfisareTabele(this).getScene());
     }
-
-    private Scene afstud;
-    private Scene afgrupe;
-    private Scene afnote;
-    public void setAfisStudenti(Scene scene) { this.afstud = scene; }
-    public void setAfisGrupe(Scene scene) { this.afgrupe = scene; }
-    public void setAfisNote(Scene scene) { this.afnote = scene; }
-
 
     public void arataAfisStudenti() {
-
-        if (afstud == null) {
-            afstud = new AfisStudenti(this).getScene();
-        }
-        switchScene(afstud);
+        switchScene(new AfisStudenti(this).getScene());
     }
 
     public void arataAfisGrupe() {
-        if (afgrupe == null) {
-            afgrupe = new AfisGrupe(this).getScene();
-        }
-        switchScene(afgrupe);
+        switchScene(new AfisGrupe(this).getScene());
     }
 
     public void arataAfisNote() {
-        if (afnote == null) {
-            afnote = new AfisNote(this).getScene();
-        }
-        switchScene(afnote);
+        switchScene(new AfisNote(this).getScene());
     }
-    private Scene rap;
+
     public void arataRapoarte() {
-        if(rap==null){
-            rap=new Rapoarte(this).getScene();
-        }
-        switchScene(rap);
+        switchScene(new Rapoarte(this).getScene());
     }
 
 
